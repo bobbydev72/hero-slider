@@ -1,5 +1,10 @@
 const swiper = new Swiper('.cards-slider', {
-    loop: true,
-    autoplay: true,
     slidesPerView: 5,
+    spaceBetween: 10,
+    loop: true,
+    speed: 1000,
+    autoplay: {
+        delay: 3000,
+    },
+    allowTouchMove: false,
 })
