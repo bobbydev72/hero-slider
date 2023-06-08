@@ -168,16 +168,30 @@ section{
 }
 
 .prompt-slider{
-    max-width: 290px;
+    max-width: 295px;
     width: 100%;
     padding: 0 16px;
-    display: inline-flex;
+    display: flex;
     align-items: center;
+    justify-content: center;
     margin-top: 150px;
     background-color: #ffffff;
     line-height: 2;
     border-radius: 9999px;
     transform: translateX(50%);
+    font-size: 14px;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.prompt-text-slider{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.prompt-title-wrap{
+    min-width: 75px;
 }
 
 /* -------------------------------------- swiper -------------------------------------- */
