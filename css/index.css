@@ -134,12 +134,12 @@ section{
     padding: 120px 0;
 }
 
-.text-wrap>:nth-child(n+2){
-    margin-top: 2rem;
-}
-
 .text-wrap p {
     line-height: 1.75;
+}
+
+.text-wrap>:nth-child(n+2){
+    margin-top: 2rem;
 }
 
 /* -------------------------------------- swiper -------------------------------------- */
@@ -167,14 +167,14 @@ section{
     object-fit: cover;
 }
 
-.prompt-slider{
+.prompt-slider-wrap{
     max-width: 295px;
     width: 100%;
     padding: 0 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 150px;
+    margin-top: 220px;
     background-color: #ffffff;
     line-height: 2;
     border-radius: 9999px;
@@ -192,6 +192,17 @@ section{
 
 .prompt-title-wrap{
     min-width: 75px;
+}
+
+.main-slider{
+    position: absolute;
+    width: 290px;
+    border-radius: 24px;
+    overflow: hidden;
+    bottom: -190px;
+    left: 72%;
+    transform: translateX(-50%);
+    z-index: 49;
 }
 
 /* -------------------------------------- swiper -------------------------------------- */
