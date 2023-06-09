@@ -100,12 +100,93 @@ button, textarea, input, select, option{
     background-color: transparent;
 }
 
+.header{
+    padding: 30px 0;
+    background-color: #ffffff;
+    border-bottom: 1px solid #F1F1F4;
+    top: 0;
+    position: sticky;
+    z-index: 9999;
+}
+
+.title-content{
+    text-align: center;
+    font-style: italic;
+    color: #909090;
+    text-transform: uppercase;
+}
+
+.section-title{
+    margin-bottom: 3rem;
+}
+
+p {
+    line-height: 2;
+}
+
+section{
+    padding: 120px 0;
+}
+
+.dark-section{
+    background-color: #23212b;
+}
+
+.text-wrap p {
+    line-height: 1.75;
+}
+
+.text-wrap.light-text-wrap p {
+    color: #ffffff;
+}
+
+.text-wrap>:nth-child(n+2){
+    margin-top: 2rem;
+}
+
+.footer{
+    padding: 30px 0;
+    border-top: 1px solid #F1F1F4;
+}
+/* -------------------------------------- hero -------------------------------------- */
+
 .hero{
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
     background-color: #23212b;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #23212b 67%, rgba(35, 33, 43, .5) 100%);
+}
+
+.hero .container{
+    position: relative;
+    z-index: 48;
+}
+
+.background-swiper-slider{
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    z-index: 0;
+}
+
+.background-swiper-slider img{
+    width: 100%;
+    height: 800px;
+    object-fit: cover;
 }
 
 .hero-info-wrap{
@@ -126,26 +207,26 @@ h1{
     margin-bottom: 48px;
 }
 
-p {
-    line-height: 2;
-}
-
-section{
-    padding: 120px 0;
-}
-
-.text-wrap p {
-    line-height: 1.75;
-}
-
-.text-wrap>:nth-child(n+2){
-    margin-top: 2rem;
-}
-
-/* -------------------------------------- swiper -------------------------------------- */
-
 .hero-slider-wrap{
     position: relative;
+}
+
+.cards-slider::before, .cards-slider::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 48;
+}
+
+.cards-slider::before {
+    background: linear-gradient(90deg, #23212b 3%, rgba(35, 33, 43, .1) 25%);
+}
+
+.cards-slider::after {
+    background: linear-gradient(270deg, #23212b 3%, rgba(35, 33, 43, .1) 25%);
 }
 
 .hero-cards-slider-wrap{
@@ -205,4 +286,4 @@ section{
     z-index: 49;
 }
 
-/* -------------------------------------- swiper -------------------------------------- */
+/* -------------------------------------- hero -------------------------------------- */

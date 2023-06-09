@@ -9,16 +9,7 @@ const aiCardsSlider = new Swiper('.cards-slider', {
     allowTouchMove: false,
 })
 
-const aiMainSwiperSlider = new Swiper('.main-swiper-slider', {
-    loop: true,
-    speed: 1000,
-    autoplay: {
-        delay: 3000,
-    },
-    allowTouchMove: false,
-})
-
-const aiPromptSlider = new Swiper('.prompt-text-slider', {
+const aiFadeSwiper = new Swiper('#fadeSlider', {
     loop: true,
     speed: 1000,
     autoplay: {
@@ -29,7 +20,14 @@ const aiPromptSlider = new Swiper('.prompt-text-slider', {
         crossFade: true
     },
     allowTouchMove: false,
-    thumbs: {
-        swiper: aiMainSwiperSlider,
-    },
 })
+
+const aiMainSwiperSlider = new Swiper('.main-swiper-slider', {
+    loop: true,
+    speed: 1000,
+    autoplay: {
+        delay: 3000,
+    },
+    allowTouchMove: false,
+})
+
