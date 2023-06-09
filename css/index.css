@@ -309,4 +309,27 @@ h1{
     z-index: 49;
 }
 
+.fade-swiper-animation .swiper-slide.swiper-slide-visible.swiper-slide-active {
+    display: initial;
+    -webkit-animation: fadeIn linear 1s;
+    animation: fadeIn linear 1s
+}
+
+@keyframes fadeIn {
+    0% {
+        -webkit-filter: opacity(0) blur(30px);
+        filter: opacity(0) blur(30px)
+    }
+
+    50% {
+        -webkit-filter: opacity(100%) blur(15px);
+        filter: opacity(100%) blur(15px)
+    }
+
+    100% {
+        -webkit-filter: opacity(100%) blur(0);
+        filter: opacity(100%) blur(0)
+    }
+}
+
 /* -------------------------------------- hero -------------------------------------- */
