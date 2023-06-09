@@ -87,6 +87,7 @@ button, textarea, input, select, option{
     font-weight: 600;
     text-transform: uppercase;
     font-size: 14px;
+    transition: .25s ease-in-out;
 }
 
 .btn.filled-btn{
@@ -94,10 +95,20 @@ button, textarea, input, select, option{
     box-shadow: 0px 6px 13px rgba(24, 222, 151, 0.54);
 }
 
+.btn.filled-btn:hover{
+    background-color: #15C585;
+}
+
 .btn.light-stroked-btn{
     border: 1px solid #ffffff;
     color: #ffffff;
     background-color: transparent;
+}
+
+.btn.light-stroked-btn:hover{
+    box-shadow: 0px 6px 13px rgba(255, 255, 255, 0.54);
+    color: #000000;
+    background-color: #ffffff;
 }
 
 .header{
@@ -207,6 +218,13 @@ h1{
     margin-bottom: 48px;
 }
 
+.services-text{
+    display: inline-flex;
+    font-size: 11px;
+    margin-top: 30px;
+    color: #ffffff;
+}
+
 .hero-slider-wrap{
     position: relative;
 }
@@ -255,14 +273,18 @@ h1{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 220px;
+    margin-top: 205px;
     background-color: #ffffff;
-    line-height: 2;
+    line-height: 2.35;
     border-radius: 9999px;
     transform: translateX(50%);
     font-size: 14px;
     white-space: nowrap;
     text-align: center;
+}
+
+.prompt-slider-wrap>:first-child{
+    color: #827D9B;
 }
 
 .prompt-text-slider{
@@ -278,7 +300,8 @@ h1{
 .main-slider{
     position: absolute;
     width: 290px;
-    border-radius: 24px;
+    height: 290px;
+    border-radius: 42px;
     overflow: hidden;
     bottom: -190px;
     left: 72%;
