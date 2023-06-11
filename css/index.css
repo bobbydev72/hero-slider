@@ -205,17 +205,21 @@ section{
     width: 100%;
 }
 
-h1{
+.hero-info-wrap h1{
     line-height: 1.5;
     font-weight: 700;
-    font-size: 56px;
+    font-size: 2.9vmax;
     color: #ffffff;
     margin-bottom: 30px;
 }
 
 .hero-info-wrap p{
+    font-size: .9vmax;
     color: #ffffff;
-    margin-bottom: 48px;
+}
+
+.hero-btns-wrap{
+    margin-top: 48px;
 }
 
 .services-text{
@@ -223,6 +227,10 @@ h1{
     font-size: 11px;
     margin-top: 30px;
     color: #ffffff;
+}
+
+.services-text.services-mobile-text{
+    display: none;
 }
 
 .hero-slider-wrap{
@@ -247,6 +255,11 @@ h1{
     background: linear-gradient(270deg, #23212b 3%, rgba(35, 33, 43, .1) 25%);
 }
 
+.hero-cards-slider-wrap, .prompt-slider-wrap, .main-slider{
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .hero-cards-slider-wrap{
     display: flex;
     width: 600px;
@@ -267,6 +280,7 @@ h1{
 }
 
 .prompt-slider-wrap{
+    position: relative;
     max-width: 295px;
     width: 100%;
     padding: 0 16px;
@@ -277,7 +291,6 @@ h1{
     background-color: #ffffff;
     line-height: 2.35;
     border-radius: 9999px;
-    transform: translateX(50%);
     font-size: 14px;
     white-space: nowrap;
     text-align: center;
@@ -304,8 +317,6 @@ h1{
     border-radius: 42px;
     overflow: hidden;
     bottom: -190px;
-    left: 72%;
-    transform: translateX(-50%);
     z-index: 49;
 }
 
@@ -329,6 +340,64 @@ h1{
     100% {
         -webkit-filter: opacity(100%) blur(0);
         filter: opacity(100%) blur(0)
+    }
+}
+
+@media (max-width: 991.98px) {
+    .hero-slider-wrap{
+        display: none;
+    }
+    .hero-info-wrap h1{
+        font-size: 54px;
+    }
+    .hero-info-wrap p{
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768.98px) {
+    .hero{
+        padding: 64px 0;
+        min-height: initial;
+    }
+    .services-text{
+        display: none;
+    }
+    .services-text.services-mobile-text{
+        position: relative;
+        top: 80px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: inline-flex;
+        font-size: 10px;
+    }
+    .prompt-slider-wrap{
+        margin-top: 100px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .hero{
+        padding: 32px 0;
+    }
+    .hero-info-wrap h1{
+        font-size: 32px;
+    }
+    .hero-info-wrap p{
+        font-size: initial;
+    }
+    .hero-info-wrap p>span{
+        display: none;
+    }
+    .btns-wrap.hero-btns-wrap{
+        flex-direction: column;
+    }
+    .btns-wrap>:nth-child(n+2){
+        margin-left: initial;
+        margin-top: 1rem;
+    }
+    .btns-wrap.hero-btns-wrap a{
+        width: 100%;
     }
 }
 
